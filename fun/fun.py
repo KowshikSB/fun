@@ -34,7 +34,7 @@ class fun(commands.Cog):
         embed.set_footer(text=f'Deleted in: #{channel_name}')
         await ctx.channel.send(embed=embed,delete_after=60)
       except:
-        await ctx.channel.send("<:potatoerror:825243570909872149> *Who pays for the ammo? `;-;` Nothing to snipe!*")
+        await ctx.channel.send("<:potatoerror:825243570909872149> *Do you want me to snipe air?*")
     bot.esniped_messages = {}
     @commands.Cog.listener()
     async def on_message_edit(self,before,after):
@@ -52,6 +52,6 @@ class fun(commands.Cog):
         embed.set_footer(text=f'Edited: #{channel_name}')
         await ctx.channel.send(embed=embed,delete_after=60)
       except:
-        await ctx.channel.send("<:potatoerror:825243570909872149> *Who pays for the ammo? `;-;` Nothing to snipe!*",delete_after=10)
+        await ctx.channel.send("<:potatoerror:825243570909872149> *Do you want me to snipe air?*",delete_after=10)
 def setup(bot):
     bot.add_cog(fun(bot))
