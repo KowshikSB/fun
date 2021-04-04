@@ -14,7 +14,7 @@ class fun(commands.Cog):
     @commands.command(aliases=['8ball'])
     async def eiball(self,message):
         ba=["Ask Me If I Care","Dumb Question Ask Another", "Forget About It" , "In Your Dreams" , "Not A Chance" , "ofc"," yeasss","I'd say yes but you have to get me some crack B)","You may rely on it","Obviously" , "What Do You Think?" ,  "Who Cares?" , "You've Got To Be Kidding","Yeah Right"," You Wish","Absolutely", "Unclear Ask Later","Chances Aren't Good", "Ask <@261742964441612298> the Coolest Person here", "Indications Say Yes" , "No Doubt About It","The Stars Say No","You Can Count On It","Ask <@533696842613915658> the lozer"]
-      
+        
         content=discord.Embed(color=0x2f3136 , description ="<:wumpus:826358844350660638> {}".format(random.choice(ba)))
         msg = await message.send(embed=content)
         await msg.add_reaction("<:thisisfine:827079892797620274>")
@@ -34,7 +34,7 @@ class fun(commands.Cog):
         embed.set_footer(text=f'Deleted in: #{channel_name}')
         await ctx.channel.send(embed=embed,delete_after=60)
       except:
-        await ctx.channel.send("<:potatoerror:825243570909872149> *Do you want me to snipe air?*")
+        await ctx.channel.send("*Do you want me to snipe air?*")
     bot.esniped_messages = {}
     @commands.Cog.listener()
     async def on_message_edit(self,before,after):
@@ -52,6 +52,6 @@ class fun(commands.Cog):
         embed.set_footer(text=f'Edited: #{channel_name}')
         await ctx.channel.send(embed=embed,delete_after=60)
       except:
-        await ctx.channel.send("<:potatoerror:825243570909872149> *Do you want me to snipe air?*",delete_after=10)
+        await ctx.channel.send("*Do you want me to snipe air?*",delete_after=10)
 def setup(bot):
     bot.add_cog(fun(bot))
