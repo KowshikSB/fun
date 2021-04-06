@@ -32,7 +32,7 @@ class fun(commands.Cog):
         embed=discord.Embed(description=contents,color=0x2f3136,timestamp=time)
         embed.set_author(name=f'{author.name}#{author.discriminator}',icon_url=author.avatar_url)
         embed.set_footer(text=f'Deleted in: #{channel_name}')
-        
+        await ctx.channel.send(embed=embed)
       except:
         await ctx.channel.send("*Do you want me to snipe air?*")
     bot.esniped_messages = {}
@@ -50,7 +50,7 @@ class fun(commands.Cog):
         embed=discord.Embed(description=contents,color=0x2f3136,timestamp=time)
         embed.set_author(name=f'{author.name}#{author.discriminator}',icon_url=author.avatar_url)
         embed.set_footer(text=f'Edited: #{channel_name}')
-        
+        await ctx.channel.send(embed=embed)
       except:
         await ctx.channel.send("*Do you want me to snipe air?*",delete_after=10)
 def setup(bot):
