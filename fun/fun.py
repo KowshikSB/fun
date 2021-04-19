@@ -11,11 +11,11 @@ class fun(commands.Cog):
     def __init__ (self, bot):
         self.bot = bot
 
-    @commands.command(aliases=['8ball'])
+    @commands.command(aliases=['8ball','8b','8B'])
     async def eiball(self,message):
         ba=["Ask Me If I Care","Dumb Question Ask Another", "Forget About It" , "In Your Dreams" , "Not A Chance" , "ofc"," yeasss","I'd say yes but you have to get me some crack B)","You may rely on it","Obviously" , "What Do You Think?" ,  "Who Cares?" , "You've Got To Be Kidding","Yeah Right"," You Wish","Absolutely", "Unclear Ask Later","Chances Aren't Good", "Ask <@261742964441612298> the Coolest Person here", "Indications Say Yes" , "No Doubt About It","The Stars Say No","You Can Count On It","Ask <@533696842613915658> the lozer"]
         
-        content=discord.Embed(color=0x2f3136 , description ="<:wumpus:826358844350660638> {}".format(random.choice(ba)))
+        content=discord.Embed(color=0x2f3136 , description ="<:mmLol:825380160765034507> {}".format(random.choice(ba)))
         msg = await message.send(embed=content)
         await msg.add_reaction("<:thisisfine:827079892797620274>")
     bot.sniped_messages = {}
