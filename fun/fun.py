@@ -7,6 +7,7 @@ from discord.ext.commands import bot
 
 import discord
 from discord.ext import commands
+from discord.ext.commands.core import command
 class fun(commands.Cog):
     def __init__ (self, bot):
         self.bot = bot
@@ -53,5 +54,95 @@ class fun(commands.Cog):
         await ctx.channel.send(embed=embed)
       except:
         await ctx.channel.send("*Do you want me to snipe air?*",delete_after=10)
+    @commands.command(aliases=['gayrate','gayr8'])
+    
+    async def howgay(self,ctx, member: discord.Member=None):
+      x=random.randint(1,100)
+      if member is None:
+        member=ctx.message.author.name
+        em = discord.Embed(title="Gay Rate",description=f'<a:disco_cat:799691432553873419> You are {x} % Gay',color=0x2f3136)
+      
+      
+        
+        await ctx.send(embed=em)
+      else:
+
+        em = discord.Embed(title="Gay Rate",description=f'<a:disco_cat:799691432553873419> {member.name} is {x} % Gay',color=0x2f3136)
+      
+      
+        
+        await ctx.send(embed=em) 
+    @commands.command()
+    async def pp(self,ctx, member: discord.Member=None):
+      x=random.randint(1,20)
+      y="8"
+      d="D"
+      c=y+"="*x+d
+      if member is None:
+        member=ctx.message.author.name
+        if x <=10:
+          z=(f''' Your PP Size..
+          is **{c}** ''')
+          em=discord.Embed(title="<:pepe_peeping:790829664230309888> Peepee Sizer",description=f'{z}',color=0x2f3136)
+          await ctx.send("<:smolpp:781375654527893560>",embed=em)
+          
+        else:
+          z=(f''' Your PP Size..
+          **{c}**  ''')
+          em=discord.Embed(title="<:pepe_peeping:790829664230309888> Peepee Sizer",description=f'{z}',color=0x2f3136)
+          await ctx.send("<:BigPP:781375681463713842>",embed=em)
+          
+          
+      else:
+        if x<=10:
+          z=(f''' {member.name}'s PP Size..
+          **{c}** ''')
+          em=discord.Embed(title="<:pepe_peeping:790829664230309888> Peepee Sizer",description=f'{z}',color=0x2f3136)
+          await ctx.send("<:smolpp:781375654527893560>",embed=em)
+          
+
+        else:
+          
+          z=(f'''{member.name}'s Your PP Size..
+          **{c}** ''')
+          em=discord.Embed(title="<:pepe_peeping:790829664230309888> Peepee Sizer",description=f'{z}',color=0x2f3136)
+          await ctx.send("<:BigPP:781375681463713842>",embed=em)
+          
+
+    @commands.command(aliases=['hornyrate'])
+    async def howhorny(self,ctx, member: discord.Member=None):
+      x=random.randint(1,100)
+      if member is None:
+        member=ctx.message.author.name
+        em = discord.Embed(title="Horny JAIL Says...",description=f'<:hmmm:790829841679253525> You are {x} % Horny',color=0x2f3136)
+      
+      
+        
+        await ctx.send(embed=em)
+      else:
+
+        em = discord.Embed(title="Horny JAIL Says...",description=f'<:hmmm:790829841679253525> {member.name} is {x} % Horny',color=0x2f3136)
+      
+      
+        
+        await ctx.send(embed=em)
+    @commands.command(aliases=['simprate'])
+    async def howsimp(self,ctx, member: discord.Member=None):
+      x=random.randint(1,100)
+      if member is None:
+        member=ctx.message.author.name
+        em = discord.Embed(title="Simp Rate",description=f'<a:simp:775732672793411605> You are {x} % Simp',color=0x2f3136)
+      
+      
+        
+        await ctx.send(embed=em)
+      else:
+
+        em = discord.Embed(title="Simp Rate",description=f'<a:simp:775732672793411605> {member.name} is {x} % Simp',color=0x2f3136)
+      
+      
+        
+        await ctx.send(embed=em) 
+
 def setup(bot):
     bot.add_cog(fun(bot))
