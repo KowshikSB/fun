@@ -60,14 +60,14 @@ class fun(commands.Cog):
       x=random.randint(1,100)
       if member is None:
         member=ctx.message.author.name
-        em = discord.Embed(title="Gay Rate",description=f'<a:disco_cat:799691432553873419> You are {x} % Gay',color=0x2f3136)
+        em = discord.Embed(title="Gay Rate",description=f'<a:homo:835055067337588746> You are {x} % Gay',color=0x2f3136)
       
       
         
         await ctx.send(embed=em)
       else:
 
-        em = discord.Embed(title="Gay Rate",description=f'<a:disco_cat:799691432553873419> {member.name} is {x} % Gay',color=0x2f3136)
+        em = discord.Embed(title="Gay Rate",description=f'<a:homo:835055067337588746> {member.name} is {x} % Gay',color=0x2f3136)
       
       
         
