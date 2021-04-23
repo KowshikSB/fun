@@ -83,30 +83,30 @@ class fun(commands.Cog):
         if x <=10:
           z=(f''' Your PP Size..
           is **{c}** ''')
-          em=discord.Embed(title="<:pepe_peeping:790829664230309888> Peepee Sizer",description=f'{z}',color=0x2f3136)
-          await ctx.send("<:smolpp:781375654527893560>",embed=em)
+          em=discord.Embed(title=" Peepee Sizer - <:smolpp:835052959955157032>",description=f'{z}',color=0x2f3136)
+          await ctx.send(embed=em)
           
         else:
           z=(f''' Your PP Size..
           **{c}**  ''')
-          em=discord.Embed(title="<:pepe_peeping:790829664230309888> Peepee Sizer",description=f'{z}',color=0x2f3136)
-          await ctx.send("<:BigPP:781375681463713842>",embed=em)
+          em=discord.Embed(title=" Peepee Sizer - <:bigpp:835053066994712597>",description=f'{z}',color=0x2f3136)
+          await ctx.send(embed=em)
           
           
       else:
         if x<=10:
           z=(f''' {member.name}'s PP Size..
           **{c}** ''')
-          em=discord.Embed(title="<:pepe_peeping:790829664230309888> Peepee Sizer",description=f'{z}',color=0x2f3136)
-          await ctx.send("<:smolpp:781375654527893560>",embed=em)
+          em=discord.Embed(title="Peepee Sizer - <:smolpp:835052959955157032>",description=f'{z}',color=0x2f3136)
+          await ctx.send(embed=em)
           
 
         else:
           
           z=(f'''{member.name}'s Your PP Size..
           **{c}** ''')
-          em=discord.Embed(title="<:pepe_peeping:790829664230309888> Peepee Sizer",description=f'{z}',color=0x2f3136)
-          await ctx.send("<:BigPP:781375681463713842>",embed=em)
+          em=discord.Embed(title="Peepee Sizer - <:bigpp:835053066994712597>",description=f'{z}',color=0x2f3136)
+          await ctx.send(embed=em)
           
 
     @commands.command(aliases=['hornyrate'])
@@ -114,14 +114,14 @@ class fun(commands.Cog):
       x=random.randint(1,100)
       if member is None:
         member=ctx.message.author.name
-        em = discord.Embed(title="Horny JAIL Says...",description=f'<:hmmm:790829841679253525> You are {x} % Horny',color=0x2f3136)
+        em = discord.Embed(title="Horny JAIL Says...",description=f'<:ok_damn:828632595759104021> You are {x} % Horny',color=0x2f3136)
       
       
         
         await ctx.send(embed=em)
       else:
 
-        em = discord.Embed(title="Horny JAIL Says...",description=f'<:hmmm:790829841679253525> {member.name} is {x} % Horny',color=0x2f3136)
+        em = discord.Embed(title="Horny JAIL Says...",description=f'<:ok_damn:828632595759104021> {member.name} is {x} % Horny',color=0x2f3136)
       
       
         
@@ -131,14 +131,14 @@ class fun(commands.Cog):
       x=random.randint(1,100)
       if member is None:
         member=ctx.message.author.name
-        em = discord.Embed(title="Simp Rate",description=f'<a:simp:775732672793411605> You are {x} % Simp',color=0x2f3136)
+        em = discord.Embed(title="Simp Rate",description=f'<a:simp:835053887492849674> You are {x} % Simp',color=0x2f3136)
       
       
         
         await ctx.send(embed=em)
       else:
 
-        em = discord.Embed(title="Simp Rate",description=f'<a:simp:775732672793411605> {member.name} is {x} % Simp',color=0x2f3136)
+        em = discord.Embed(title="Simp Rate",description=f'<a:simp:835053887492849674> {member.name} is {x} % Simp',color=0x2f3136)
       
       
         
