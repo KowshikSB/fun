@@ -17,7 +17,7 @@ class fun(commands.Cog):
         ba=["Ask Me If I Care","Dumb Question Ask Another", "Forget About It" , "In Your Dreams" , "Not A Chance" , "ofc"," yeasss","I'd say yes but you have to get me some crack B)","You may rely on it","Obviously" , "What Do You Think?" ,  "Who Cares?" , "You've Got To Be Kidding","Yeah Right"," You Wish","Absolutely", "Unclear Ask Later","Chances Aren't Good", "Ask <@261742964441612298> the Coolest Person here", "Indications Say Yes" , "No Doubt About It","The Stars Say No","You Can Count On It","Ask <@533696842613915658> the lozer"]
         
         content=discord.Embed(color=0x2f3136 , description ="<:mmLol:825380160765034507> {}".format(random.choice(ba)))
-        msg = await message.send(embed=content)
+        msg = await message.reply(embed=content,mention_author=False)
         await msg.add_reaction("<:thisisfine:827079892797620274>")
     bot.sniped_messages = {}
     @commands.Cog.listener()
@@ -33,9 +33,9 @@ class fun(commands.Cog):
         embed=discord.Embed(description=contents,color=0x2f3136,timestamp=time)
         embed.set_author(name=f'{author.name}#{author.discriminator}',icon_url=author.avatar_url)
         embed.set_footer(text=f'Deleted in: #{channel_name}')
-        await ctx.channel.send(embed=embed)
+        await ctx.reply(embed=embed,mention_author=False)
       except:
-        await ctx.channel.send("*Do you want me to snipe air?*")
+        await ctx.reply("*Do you want me to snipe air?*")
     bot.esniped_messages = {}
     @commands.Cog.listener()
     async def on_message_edit(self,before,after):
