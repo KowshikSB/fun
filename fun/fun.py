@@ -1,24 +1,23 @@
+import discord
 from discord.ext import commands
 from discord import channel, utils
 import discord
 import asyncio
 import random
 from discord.ext.commands import bot
-
-import discord
 from discord.ext import commands
 from discord.ext.commands.core import command
 class fun(commands.Cog):
     def __init__ (self, bot):
         self.bot = bot
-
+        
     @commands.command(aliases=['8ball','8b','8B'])
     async def eiball(self,message):
         ba=["Ask Me If I Care","Dumb Question Ask Another", "Forget About It" , "In Your Dreams" , "Not A Chance" , "ofc"," yeasss","I'd say yes but you have to get me some crack B)","You may rely on it","Obviously" , "What Do You Think?" ,  "Who Cares?" , "You've Got To Be Kidding","Yeah Right"," You Wish","Absolutely", "Unclear Ask Later","Chances Aren't Good", "Ask <@261742964441612298> the Coolest Person here", "Indications Say Yes" , "No Doubt About It","The Stars Say No","You Can Count On It","Ask <@533696842613915658> the lozer"]
         
         content=discord.Embed(color=0x2f3136 , description ="<:mmLol:825380160765034507> {}".format(random.choice(ba)))
         msg = await message.reply(embed=content,mention_author=False)
-        await msg.add_reaction("<:thisisfine:827079892797620274>")
+        
     bot.sniped_messages = {}
     @commands.Cog.listener()
     async def on_message_delete(self,message):
@@ -115,35 +114,35 @@ class fun(commands.Cog):
       x=random.randint(1,100)
       if member is None:
         member=ctx.message.author.name
-        em = discord.Embed(title="Horny JAIL Says...",description=f'<:ok_damn:828632595759104021> You are {x} % Horny',color=0x2f3136)
+        
       
       
         
-        await ctx.reply(embed=em,mention_author=False)
+        await ctx.reply(f'**You** are **{x}**% horny',mention_author=False)
       else:
 
-        em = discord.Embed(title="Horny JAIL Says...",description=f'<:ok_damn:828632595759104021> {member.name} is {x} % Horny',color=0x2f3136)
+        
       
       
         
-        await ctx.reply(embed=em,mention_author=False)
+        await ctx.reply(f'**{member.name}** is **{x}**% horny',mention_author=False)
     @commands.command(aliases=['simprate'])
     async def howsimp(self,ctx, member: discord.Member=None):
       x=random.randint(1,100)
       if member is None:
         member=ctx.message.author.name
-        em = discord.Embed(title="Simp Rate",description=f'<a:simp:835053887492849674> You are {x} % Simp',color=0x2f3136)
+        
       
       
         
-        await ctx.reply(embed=em,mention_author=False)
+        await ctx.reply(f'<a:homo:835055067337588746> **You** are **{x}**% Gay',mention_author=False)
       else:
 
-        em = discord.Embed(title="Simp Rate",description=f'<a:simp:835053887492849674> {member.name} is {x} % Simp',color=0x2f3136)
+       
       
       
         
-        await ctx.reply(embed=em,mention_author=False) 
+        await ctx.reply(f'<a:homo:835055067337588746> **{member.name}** is **{x}**% Gay',mention_author=False) 
 
 def setup(bot):
     bot.add_cog(fun(bot))
