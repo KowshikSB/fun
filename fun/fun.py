@@ -71,7 +71,7 @@ class fun(commands.Cog):
       
       
         
-        await ctx.reply(f'<a:homo:835055067337588746> **{member}** is **{x}**% Gay',mention_author=False) 
+        await ctx.reply(f'<a:homo:835055067337588746> **{member.name}** is **{x}**% Gay',mention_author=False) 
     @commands.command()
     async def pp(self,ctx, member: discord.Member=None):
       x=random.randint(1,20)
